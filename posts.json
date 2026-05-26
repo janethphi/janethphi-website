@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "title": "¿Duele el microblading? Todo lo que necesitas saber",
+      "date": "2025-01-01",
+      "excerpt": "Una de las preguntas más frecuentes antes de la sesión. Se aplica anestesia tópica, así que la mayoría solo siente una ligera presión.",
+      "category": "Microblading"
+    },
+    {
+      "title": "¿Qué es la SMP y quién es candidato?",
+      "date": "2025-01-02",
+      "excerpt": "La micropigmentación capilar simula folículos con precisión milimétrica. Sin cirugía, sin recuperación.",
+      "category": "Scalp Micropigmentation"
+    },
+    {
+      "title": "Cuidado post-facial: qué hacer las primeras 48 horas",
+      "date": "2025-01-03",
+      "excerpt": "Evita maquillaje, sol directo y actividad intensa. Pequeños hábitos que multiplican los resultados.",
+      "category": "Faciales"
+    }
+  ]
+}
