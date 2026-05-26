@@ -10,13 +10,17 @@ locale: "es"
 collections:
   - name: "blog"
     label: "Blog"
-    label_singular: "Artículo"
-    folder: "posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Resumen", name: "excerpt", widget: "text"}
-      - {label: "Categoría", name: "category", widget: "select", options: ["Microblading","Scalp Micropigmentation","Faciales","General"]}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+    files:
+      - label: "Artículos del Blog"
+        name: "posts"
+        file: "posts.json"
+        fields:
+          - label: "Artículos"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Resumen", name: "excerpt", widget: "text"}
+              - {label: "Categoría", name: "category", widget: "select", options: ["Microblading", "Scalp Micropigmentation", "Faciales", "General"]}
