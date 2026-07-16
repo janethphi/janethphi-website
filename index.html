@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JanethPhi | Microblading y Scalp Micropigmentation en Tijuana</title>
+<meta name="description" content="Microblading, Scalp Micropigmentation y faciales en Tijuana. Janeth, especialista certificada Phi Academy, con más de 5 años y 500 clientas. Resultados reales, sin filtros.">
+<link rel="canonical" href="https://janethphi.netlify.app/">
+<link rel="icon" type="image/png" href="/imagenes/favicon.png">
+<link rel="apple-touch-icon" href="/imagenes/favicon.png">
+
+<!-- Open Graph / WhatsApp / Redes -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="JanethPhi | Microblading y SMP en Tijuana">
+<meta property="og:description" content="Especialista certificada Phi Academy. Microblading, Scalp Micropigmentation y faciales — resultados reales, sin filtros.">
+<meta property="og:url" content="https://janethphi.netlify.app/">
+<meta property="og:image" content="https://janethphi.netlify.app/imagenes/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/imagenes/poster-hero.webp">
+
+<style>
+  :root {
+    --ink: #0B0A08;
+    --ink-2: #121009;
+    --card: #17140F;
+    --ivory: #F4EFE7;
+    --ivory-70: rgba(244,239,231,0.72);
+    --ivory-55: rgba(244,239,231,0.58);
+    --muted: #9A948A;
+    --gold: #C9A84C;
+    --gold-soft: #E3C87E;
+    --red: #A93226;
+    --line: rgba(201,168,76,0.22);
+    --line-soft: rgba(201,168,76,0.13);
+    --pad-x: clamp(1.25rem, 5vw, 4.5rem);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--ink);
+    color: var(--ivory);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+  /* grano de película sutil — firma editorial */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.035;
+  }
+  main, nav, footer { position: relative; z-index: 2; }
+  img, video { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+
+  .display { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+  .label {
+    font-size: 0.75rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400; display: block;
+  }
+  .hairline { width: 56px; height: 1px; background: linear-gradient(to right, var(--gold), transparent); margin: 1.4rem 0 2.2rem; }
+  .center { text-align: center; }
+  .center .hairline { margin-left: auto; margin-right: auto; }
+
+  /* trazo — motivo de firma (subrayado caligráfico) */
+  .stroke-u { position: relative; white-space: nowrap; }
+  .stroke-u svg { position: absolute; left: 0; right: 0; bottom: -0.12em; width: 100%; height: 0.22em; }
+  .stroke-u svg path { stroke: var(--gold); stroke-width: 2.5; fill: none; opacity: 0.85; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.9rem var(--pad-x);
+    background: linear-gradient(to bottom, rgba(11,10,8,0.96) 55%, rgba(11,10,8,0));
+    backdrop-filter: blur(6px);
+  }
+  nav .logo { height: 48px; width: auto; }
+  .nav-links { list-style: none; display: flex; align-items: center; gap: 2.2rem; }
+  .nav-links a {
+    text-decoration: none; font-size: 0.78rem; font-weight: 400;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ivory-70);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-soft); }
+  .nav-cta {
+    border: 1px solid var(--gold); color: var(--gold) !important;
+    padding: 0.6rem 1.35rem; border-radius: 2px;
+    transition: background 0.2s, color 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--ink) !important; }
+  .nav-toggle {
+    display: none; background: none; border: 0; cursor: pointer;
+    width: 46px; height: 46px; align-items: center; justify-content: center;
+    flex-direction: column; gap: 6px;
+  }
+  .nav-toggle span { width: 26px; height: 1.5px; background: var(--ivory); transition: transform 0.25s, opacity 0.25s; }
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 99; background: rgba(11,10,8,0.98);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+    opacity: 0; visibility: hidden; transition: opacity 0.25s, visibility 0.25s;
+  }
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 500;
+    color: var(--ivory); text-decoration: none;
+  }
+  .mobile-menu a.m-cta { font-family: 'Jost', sans-serif; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid var(--gold); color: var(--gold); padding: 1rem 2.2rem; border-radius: 2px; }
+  body.menu-open .mobile-menu { opacity: 1; visibility: visible; }
+  body.menu-open { overflow: hidden; }
+  body.menu-open .nav-toggle span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  body.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100dvh;
+    display: grid; grid-template-columns: 1.15fr 0.85fr;
+    align-items: center; gap: clamp(2rem, 5vw, 5rem);
+    padding: 7.5rem var(--pad-x) 4rem;
+    position: relative;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 65% 55% at 22% 38%, rgba(201,168,76,0.07) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 45% at 85% 85%, rgba(169,50,38,0.06) 0%, transparent 65%);
+  }
+  .hero-copy { position: relative; }
+  .hero-copy .label { margin-bottom: 1.6rem; }
+  #hero h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: clamp(3.1rem, 6.5vw, 5.6rem);
+    line-height: 1.04; letter-spacing: -0.01em;
+    max-width: 12ch;
+  }
+  #hero h1 em { font-style: italic; color: var(--gold-soft); }
+  .hero-lead {
+    margin-top: 1.8rem; max-width: 46ch;
+    font-size: clamp(1rem, 1.4vw, 1.12rem); color: var(--ivory-70); font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.6rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 1rem 2.2rem; border-radius: 2px; text-decoration: none;
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, color 0.2s, background 0.2s;
+    cursor: pointer; min-height: 48px;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-gold { background: linear-gradient(120deg, var(--gold), var(--gold-soft)); color: var(--ink); }
+  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 34px rgba(201,168,76,0.28); }
+  .btn-outline { border: 1px solid rgba(244,239,231,0.3); color: var(--ivory); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-soft); }
+  .hero-trust {
+    margin-top: 3rem; padding-top: 1.6rem; border-top: 1px solid var(--line-soft);
+    display: flex; gap: 2.4rem; flex-wrap: wrap;
+  }
+  .trust-item strong {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.7rem;
+    color: var(--gold-soft); display: block; line-height: 1.1;
+  }
+  .trust-item span { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+  .hero-media { position: relative; justify-self: end; width: min(100%, 380px); }
+  .media-frame { position: relative; aspect-ratio: 9/16; background: var(--card); overflow: hidden; }
+  .media-frame video, .media-frame img { width: 100%; height: 100%; object-fit: cover; }
+  .media-frame::after {
+    content: ''; position: absolute; right: -10px; bottom: -10px;
+    width: 62%; height: 62%; border-right: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+    pointer-events: none;
+  }
+  .media-frame::before {
+    content: ''; position: absolute; left: -10px; top: -10px; z-index: 1;
+    width: 34%; height: 34%; border-left: 1px solid var(--red); border-top: 1px solid var(--red);
+    pointer-events: none;
+  }
+  .media-caption {
+    margin-top: 1.1rem; display: flex; align-items: center; gap: 0.7rem;
+    font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  }
+  .media-caption::before { content: ''; width: 26px; height: 1px; background: var(--gold); flex-shrink: 0; }
+
+  /* ── SECCIONES ── */
+  section { padding: clamp(5rem, 9vw, 8rem) var(--pad-x); }
+  .section-head { max-width: 640px; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: clamp(2.1rem, 4vw, 3.3rem); line-height: 1.12;
+  }
+  .section-title em { font-style: italic; color: var(--gold-soft); }
+
+  /* ── SERVICIOS (filas editoriales) ── */
+  #servicios { background: var(--ink); padding-bottom: clamp(4rem, 7vw, 6rem); }
+  .service-rows { margin-top: 3.5rem; border-top: 1px solid var(--line); }
+  .service-row {
+    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr) auto;
+    gap: clamp(1rem, 3vw, 3rem); align-items: center;
+    padding: 2.4rem 0; border-bottom: 1px solid var(--line);
+    position: relative; text-decoration: none;
+  }
+  .service-row::after {
+    content: ''; position: absolute; left: 0; bottom: -1px; height: 1px; width: 100%;
+    background: linear-gradient(to right, var(--red), var(--gold));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.45s ease;
+  }
+  .service-row:hover::after { transform: scaleX(1); }
+  .service-row h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1.15;
+    transition: color 0.25s;
+  }
+  .service-row:hover h3 { color: var(--gold-soft); }
+  .service-row .s-desc { color: var(--ivory-55); font-size: 0.96rem; max-width: 52ch; }
+  .service-row .s-meta { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-top: 0.5rem; }
+  .service-row .s-arrow {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--gold);
+    transition: transform 0.25s; white-space: nowrap;
+  }
+  .service-row:hover .s-arrow { transform: translateX(6px); }
+
+  /* ── GALERÍA ── */
+  #galeria { background: var(--ink-2); }
+  .gallery-tabs { display: flex; gap: 0; margin-top: 3rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .gallery-tab {
+    padding: 0.9rem 1.8rem; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); cursor: pointer; background: none; border: 0;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    font-family: 'Jost', sans-serif; font-weight: 400; min-height: 48px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .gallery-tab:hover { color: var(--ivory); }
+  .gallery-tab[aria-selected="true"] { color: var(--gold); border-bottom-color: var(--gold); }
+  .gallery-panel { display: none; margin-top: 2rem; }
+  .gallery-panel.active { display: block; }
+
+  /* slider antes/después — elemento firma */
+  .ba { position: relative; overflow: hidden; background: var(--card); touch-action: pan-y; }
+  .ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ba .ba-before { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+  .ba-handle {
+    position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 1.5px;
+    background: var(--gold); transform: translateX(-50%); pointer-events: none; z-index: 2;
+  }
+  .ba-handle::after {
+    content: '‹ ›'; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 46px; height: 46px; border-radius: 50%;
+    background: var(--ink); border: 1px solid var(--gold); color: var(--gold-soft);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; letter-spacing: 2px; padding-bottom: 2px;
+  }
+  .ba-range {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    opacity: 0; cursor: ew-resize; z-index: 3; margin: 0;
+    -webkit-appearance: none; appearance: none;
+  }
+  .ba-chip {
+    position: absolute; bottom: 1rem; z-index: 2;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    background: rgba(11,10,8,0.75); padding: 0.35rem 0.8rem; border-radius: 2px;
+    pointer-events: none;
+  }
+  .ba-chip.antes { left: 1rem; color: var(--ivory-70); }
+  .ba-chip.despues { right: 1rem; color: var(--gold-soft); }
+  .ba-wide { aspect-ratio: 2/1; max-height: 520px; }
+  .ba-tall { aspect-ratio: 1/2; height: 100%; min-height: 480px; }
+
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; }
+  .g-item { position: relative; overflow: hidden; aspect-ratio: 1/1; background: var(--card); }
+  .g-item img, .g-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .g-item:hover img { transform: scale(1.035); }
+  .g-overlay {
+    position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 1.1rem;
+    background: linear-gradient(to top, rgba(11,10,8,0.8) 0%, transparent 50%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .g-item:hover .g-overlay, .g-item:focus-within .g-overlay { opacity: 1; }
+  .g-overlay span { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); }
+  .g-cta {
+    background: var(--card); border: 1px solid var(--line);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.9rem; text-align: center; padding: 2rem;
+  }
+  .g-cta p { font-size: 0.92rem; color: var(--ivory-55); line-height: 1.6; }
+  .smp-layout { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr); gap: 8px; }
+  .smp-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .faciales-cta {
+    background: var(--card); border: 1px solid var(--line);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 4.5rem 2rem; gap: 1rem; text-align: center;
+  }
+  .faciales-cta h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.8rem; }
+  .faciales-cta p { font-size: 0.95rem; color: var(--ivory-55); max-width: 40ch; }
+
+  /* franja de referencias ilustrativas */
+  .ilu-block { margin-top: 4.5rem; }
+  .ilu-head { display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 1.3rem; }
+  .ilu-head p { font-size: 0.88rem; color: var(--muted); }
+  .ilu-strip {
+    display: flex; gap: 8px; overflow-x: auto;
+    scroll-snap-type: x mandatory; padding-bottom: 0.9rem;
+    scrollbar-width: thin; scrollbar-color: var(--gold) transparent;
+  }
+  .ilu-strip::-webkit-scrollbar { height: 4px; }
+  .ilu-strip::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
+  .ilu-item {
+    position: relative; flex: 0 0 clamp(180px, 22vw, 250px); aspect-ratio: 4/5;
+    scroll-snap-align: start; overflow: hidden; background: var(--card);
+  }
+  .ilu-item img { width: 100%; height: 100%; object-fit: cover; }
+  .chip-ilu {
+    position: absolute; top: 0.7rem; left: 0.7rem; z-index: 2;
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    background: rgba(11,10,8,0.8); color: var(--muted);
+    padding: 0.28rem 0.7rem; border-radius: 2px; border: 1px solid var(--line-soft);
+  }
+
+  /* ── SOBRE MÍ ── */
+  #sobre-mi { background: var(--ink); }
+  .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(3rem, 6vw, 6rem); align-items: center; }
+  .about-frame { position: relative; aspect-ratio: 4/5; background: var(--card); }
+  .about-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .about-frame::after {
+    content: ''; position: absolute; right: -12px; bottom: -12px;
+    width: 64%; height: 64%; border-right: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+  }
+  .about-frame::before {
+    content: ''; position: absolute; left: -12px; top: -12px; z-index: 1;
+    width: 34%; height: 34%; border-left: 1px solid var(--red); border-top: 1px solid var(--red);
+  }
+  .about-text { color: var(--ivory-70); margin: 1.3rem 0; max-width: 56ch; }
+  .about-cred {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    border: 1px solid var(--line); padding: 0.7rem 1.2rem; border-radius: 2px;
+    font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-soft);
+    margin: 0.8rem 0 1.6rem;
+  }
+  .about-cred::before { content: '✦'; color: var(--gold); }
+
+  /* ── TESTIMONIOS ── */
+  #testimonios { background: var(--ink-2); }
+  .testimonios-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 1.4rem; margin-top: 3.5rem; }
+  .t-card { background: var(--card); border: 1px solid var(--line-soft); padding: 2.4rem; position: relative; display: flex; flex-direction: column; }
+  .t-card.featured { border-color: var(--line); }
+  .t-card::before {
+    content: '\201C'; font-family: 'Cormorant Garamond', serif;
+    font-size: 5.5rem; line-height: 0.7; color: rgba(201,168,76,0.18);
+    position: absolute; top: 1.6rem; left: 1.8rem;
+  }
+  .t-stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 1.1rem; position: relative; }
+  .t-text { font-size: 0.97rem; color: var(--ivory-70); position: relative; flex: 1; }
+  .t-card.featured .t-text { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; line-height: 1.5; color: var(--ivory); }
+  .t-author { display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--line-soft); padding-top: 1.2rem; margin-top: 1.6rem; }
+  .t-avatar {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--red), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.95rem; color: #fff;
+  }
+  .t-name { font-size: 0.88rem; font-weight: 400; }
+  .t-service { font-size: 0.75rem; color: var(--muted); }
+
+  /* ── BLOG ── */
+  #blog { background: var(--ink); }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.4rem; margin-top: 3.5rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+  .post-card {
+    background: var(--card); border: 1px solid var(--line-soft); padding: 2.2rem;
+    text-decoration: none; display: flex; flex-direction: column;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .post-card:hover { border-color: var(--line); transform: translateY(-3px); }
+  .post-cat { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+  .post-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.45rem; line-height: 1.3; margin: 0.8rem 0; }
+  .post-card p { font-size: 0.92rem; color: var(--ivory-55); flex: 1; }
+  .post-foot { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line-soft); padding-top: 1rem; margin-top: 1.5rem; }
+  .post-date { font-size: 0.75rem; color: var(--muted); }
+  .post-link { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-soft); }
+
+  /* ── FAQ ── */
+  #faq { background: var(--ink-2); }
+  #faq .inner { max-width: 780px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--line-soft); }
+  .faq-q {
+    width: 100%; background: none; border: 0; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    padding: 1.5rem 0; text-align: left; min-height: 48px;
+    font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 400; color: var(--ivory);
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--gold-soft); }
+  .faq-icon { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 500; color: var(--gold); flex-shrink: 0; line-height: 1; transition: transform 0.3s; }
+  .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+  .faq-a.open { max-height: 260px; }
+  .faq-a p { font-size: 0.95rem; color: var(--ivory-55); padding-bottom: 1.5rem; }
+  .faq-a a { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid var(--line); }
+
+  /* ── CONTACTO ── */
+  #contacto { background: var(--ink); position: relative; overflow: hidden; }
+  #contacto::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 60% 60% at 50% 45%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  }
+  .contacto-inner { max-width: 720px; margin: 0 auto; text-align: center; position: relative; }
+  .contacto-inner > p { color: var(--ivory-70); margin: 0 auto 2.8rem; max-width: 52ch; }
+  .contact-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-wa { background: #25D366; color: var(--ink); font-weight: 500; }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,211,102,0.28); }
+  .contact-info { margin-top: 3rem; display: flex; justify-content: center; gap: clamp(1.5rem, 4vw, 3.2rem); flex-wrap: wrap; }
+  .c-item { text-align: center; max-width: 260px; }
+  .c-label { font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.4rem; }
+  .c-val { font-size: 0.92rem; color: var(--ivory-70); }
+  .c-val a { color: var(--ivory-70); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .c-sub { font-size: 0.8rem; color: var(--muted); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080706; padding: 2.4rem var(--pad-x);
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    border-top: 1px solid var(--line-soft);
+  }
+  footer img { height: 34px; width: auto; }
+  .f-copy { font-size: 0.75rem; color: var(--muted); }
+  .f-social { display: flex; gap: 1.4rem; }
+  .f-social a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .f-social a:hover { color: var(--gold-soft); }
+
+  /* ── WHATSAPP FLOAT ── */
+  .wa-float {
+    position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 90;
+    width: 56px; height: 56px; border-radius: 50%; background: #25D366;
+    display: flex; align-items: center; justify-content: center; text-decoration: none;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.35); transition: transform 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.08); }
+  .wa-float svg { width: 27px; height: 27px; fill: var(--ink); }
+
+  /* ── REVEAL ── */
+  .rv { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    #hero { grid-template-columns: 1fr; padding-top: 6.5rem; gap: 3rem; }
+    #hero h1 { max-width: none; }
+    .hero-media { justify-self: center; width: min(100%, 340px); }
+    .service-row { grid-template-columns: 1fr; gap: 0.6rem; padding: 2rem 0; }
+    .service-row .s-arrow { justify-self: start; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-frame { max-width: 420px; margin: 0 auto; }
+    .testimonios-grid { grid-template-columns: 1fr; }
+    .smp-layout { grid-template-columns: 1fr; }
+    .ba-tall { aspect-ratio: 1/1.4; min-height: 0; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    footer { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 560px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .smp-photos { grid-template-columns: 1fr; }
+    .ba-wide { aspect-ratio: 2/1; }
+    .hero-actions .btn { width: 100%; justify-content: center; }
+    .hero-trust { gap: 1.5rem; }
+  }
+</style>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+</head>
+<body>
+
+<nav aria-label="Navegación principal">
+  <a href="#hero" aria-label="JanethPhi — inicio"><img class="logo" src="/imagenes/logo.png" alt="JanethPhi" width="400" height="400"></a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#galeria">Resultados</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contacto" class="nav-cta">Agendar cita</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#servicios">Servicios</a>
+  <a href="#galeria">Resultados</a>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#blog">Blog</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contacto" class="m-cta">Agendar cita</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-copy">
+    <span class="label">Estética de precisión · Tijuana, B.C.</span>
+    <h1>El <em>trazo</em> lo cambia todo.</h1>
+    <p class="hero-lead">Microblading, Scalp Micropigmentation y faciales con técnica certificada Phi Academy. Resultados que se ven tuyos de nacimiento — porque así se trabajan: trazo a trazo.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20me%20interesa%20agendar%20una%20cita" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+      <a class="btn btn-outline" href="#galeria">Ver resultados reales</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><strong>Phi Academy</strong><span>Certificación internacional</span></div>
+      <div class="trust-item"><strong>+500</strong><span>Clientas atendidas</span></div>
+      <div class="trust-item"><strong>+5 años</strong><span>De experiencia</span></div>
+    </div>
+  </div>
+  <div class="hero-media">
+    <div class="media-frame">
+      <video autoplay muted loop playsinline preload="metadata" poster="/imagenes/poster-hero.webp" aria-label="Video del proceso de microblading: trazos pelo a pelo sobre la ceja">
+        <source src="/videos/hero-microblading.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="media-caption">Trabajo real · Trazo pelo a pelo</p>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-head rv">
+    <span class="label">Servicios</span>
+    <h2 class="section-title">Tres especialidades,<br>una obsesión: <em>la precisión.</em></h2>
+    <div class="hairline"></div>
+  </div>
+  <div class="service-rows">
+    <a class="service-row rv" href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20información%20sobre%20microblading" target="_blank" rel="noopener">
+      <h3>Microblading</h3>
+      <div>
+        <p class="s-desc">Cejas diseñadas pelo a pelo según tu estructura ósea y tono de piel. Aspecto natural que dura de 12 a 18 meses.</p>
+        <span class="s-meta">Cejas · Semipermanente</span>
+      </div>
+      <span class="s-arrow" aria-hidden="true">Consultar ⟶</span>
+    </a>
+    <a class="service-row rv" href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20información%20sobre%20scalp%20micropigmentation" target="_blank" rel="noopener">
+      <h3>Scalp Micropigmentation</h3>
+      <div>
+        <p class="s-desc">Pigmentación capilar que simula folículos con precisión milimétrica. La solución estética para alopecia y calvicie — sin cirugía, sin recuperación.</p>
+        <span class="s-meta">Cabello · Pigmentación</span>
+      </div>
+      <span class="s-arrow" aria-hidden="true">Consultar ⟶</span>
+    </a>
+    <a class="service-row rv" href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20información%20sobre%20faciales" target="_blank" rel="noopener">
+      <h3>Faciales</h3>
+      <div>
+        <p class="s-desc">Tratamientos personalizados según tu tipo de piel: limpieza profunda, hidratación y antienvejecimiento con productos profesionales.</p>
+        <span class="s-meta">Piel · Cuidado facial</span>
+      </div>
+      <span class="s-arrow" aria-hidden="true">Consultar ⟶</span>
+    </a>
+  </div>
+</section>
+
+<!-- GALERÍA / RESULTADOS -->
+<section id="galeria">
+  <div class="section-head rv">
+    <span class="label">Resultados reales</span>
+    <h2 class="section-title">Antes y después, <em>sin filtros.</em></h2>
+    <div class="hairline"></div>
+    <p style="color:var(--ivory-55);font-size:0.97rem;max-width:46ch;">Trabajo real de clientas reales. Desliza el comparador y míralo tú misma.</p>
+  </div>
+
+  <div class="gallery-tabs" role="tablist" aria-label="Categorías de resultados">
+    <button class="gallery-tab" role="tab" aria-selected="true" aria-controls="tab-mb" id="tabbtn-mb">Microblading</button>
+    <button class="gallery-tab" role="tab" aria-selected="false" aria-controls="tab-smp" id="tabbtn-smp">Scalp Micropigmentation</button>
+    <button class="gallery-tab" role="tab" aria-selected="false" aria-controls="tab-faciales" id="tabbtn-faciales">Faciales</button>
+  </div>
+
+  <!-- MICROBLADING -->
+  <div class="gallery-panel active" id="tab-mb" role="tabpanel" aria-labelledby="tabbtn-mb">
+    <div class="ba ba-wide rv" style="--pos:50%">
+      <img class="ba-after" src="/imagenes/slider-mb-despues.webp" alt="Después del microblading: cejas reconstruidas pelo a pelo, más densas y simétricas" width="1080" height="540" loading="lazy">
+      <img class="ba-before" src="/imagenes/slider-mb-antes.webp" alt="Antes del microblading: cejas despobladas y sin definición" width="1080" height="540" loading="lazy">
+      <div class="ba-handle" aria-hidden="true"></div>
+      <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Deslizar para comparar el antes y después del microblading">
+      <span class="ba-chip antes">Antes</span>
+      <span class="ba-chip despues">Después</span>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item rv"><img src="/imagenes/mb-procedimiento-trazo.webp" alt="Janeth realizando trazos de microblading pelo a pelo con instrumento manual" width="1080" height="1350" loading="lazy"><div class="g-overlay"><span>Técnica pelo a pelo</span></div></div>
+      <div class="g-item rv"><img src="/imagenes/mb-antes-despues-2.webp" alt="Comparación de cejas antes y después del microblading" width="1080" height="1079" loading="lazy"><div class="g-overlay"><span>Antes · Después</span></div></div>
+      <div class="g-item rv"><img src="/imagenes/mb-antes-despues-3.webp" alt="Detalle de cejas rediseñadas con microblading, acabado natural" width="1060" height="1060" loading="lazy"><div class="g-overlay"><span>Antes · Después</span></div></div>
+      <div class="g-item rv"><img src="/imagenes/mb-diseno-mapping.webp" alt="Diseño y mapeo previo de cejas antes de pigmentar" width="1080" height="1080" loading="lazy"><div class="g-overlay"><span>Diseño personalizado</span></div></div>
+      <div class="g-item rv"><img src="/imagenes/mb-clienta-resultado.webp" alt="Clienta sonriendo con sus cejas recién trabajadas" width="1080" height="1080" loading="lazy"><div class="g-overlay"><span>Resultado natural</span></div></div>
+      <div class="g-item g-cta rv">
+        <span class="label" style="letter-spacing:0.24em;">¿Lista para el cambio?</span>
+        <p>Agenda tu valoración gratuita hoy mismo.</p>
+        <a href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20información%20sobre%20microblading" class="btn btn-gold" style="padding:0.8rem 1.6rem;font-size:0.72rem;" target="_blank" rel="noopener">Agendar ⟶</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SMP -->
+  <div class="gallery-panel" id="tab-smp" role="tabpanel" aria-labelledby="tabbtn-smp">
+    <div class="smp-layout">
+      <div class="ba ba-tall rv" style="--pos:50%">
+        <img class="ba-after" src="/imagenes/slider-smp-despues.webp" alt="Después de la Scalp Micropigmentation: densidad capilar uniforme y línea definida" width="540" height="1080" loading="lazy">
+        <img class="ba-before" src="/imagenes/slider-smp-antes.webp" alt="Antes de la Scalp Micropigmentation: cuero cabelludo con calvicie visible" width="540" height="1080" loading="lazy">
+        <div class="ba-handle" aria-hidden="true"></div>
+        <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Deslizar para comparar el antes y después de la micropigmentación capilar">
+        <span class="ba-chip antes">Antes</span>
+        <span class="ba-chip despues">Después</span>
+      </div>
+      <div class="smp-photos">
+        <div class="g-item rv"><img src="/imagenes/smp-antes-despues-2.webp" alt="Antes y después de micropigmentación capilar, vista posterior" width="1080" height="1080" loading="lazy"><div class="g-overlay"><span>Antes · Después</span></div></div>
+        <div class="g-item rv"><img src="/imagenes/smp-vista-superior.webp" alt="Resultado de SMP con línea frontal natural, vista superior" width="1080" height="1080" loading="lazy"><div class="g-overlay"><span>Línea frontal natural</span></div></div>
+        <div class="g-item rv"><img src="/imagenes/smp-antes-despues-3.webp" alt="Cobertura completa de zona con alopecia mediante micropigmentación" width="1080" height="1350" loading="lazy"><div class="g-overlay"><span>Cobertura total</span></div></div>
+        <div class="g-item rv">
+          <video muted loop playsinline preload="none" poster="/imagenes/poster-smp.webp" aria-label="Video macro del proceso de micropigmentación capilar: implantación de folículos punto por punto">
+            <source src="/videos/smp-proceso.mp4" type="video/mp4">
+          </video>
+          <div class="g-overlay" style="opacity:1;"><span>Proceso en vivo</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACIALES -->
+  <div class="gallery-panel" id="tab-faciales" role="tabpanel" aria-labelledby="tabbtn-faciales">
+    <div class="faciales-cta rv">
+      <span class="label">Faciales personalizados</span>
+      <h3>Cada piel pide algo distinto</h3>
+      <p>Limpieza profunda, hidratación o antienvejecimiento — el tratamiento se diseña en tu valoración, según tu tipo de piel.</p>
+      <a href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20información%20sobre%20faciales" class="btn btn-gold" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- REFERENCIAS ILUSTRATIVAS DE LA TÉCNICA -->
+  <div class="ilu-block rv">
+    <div class="ilu-head">
+      <span class="label">Referencias de la técnica</span>
+      <p>Imágenes ilustrativas del tipo de transformación que logra cada procedimiento.</p>
+    </div>
+    <div class="ilu-strip" role="group" aria-label="Imágenes ilustrativas de referencia">
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-01.webp" alt="Ilustración de referencia: resultado de micropigmentación capilar sobre fondo oscuro" loading="lazy" width="900" height="1157"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-02.webp" alt="Ilustración de referencia: antes y después de micropigmentación capilar" loading="lazy" width="900" height="900"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-03.webp" alt="Ilustración de referencia: cobertura de calvicie con micropigmentación" loading="lazy" width="900" height="900"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-04.webp" alt="Ilustración de referencia: línea frontal reconstruida con SMP" loading="lazy" width="900" height="900"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-05.webp" alt="Ilustración de referencia: densidad capilar simulada con micropuntos" loading="lazy" width="900" height="900"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-06.webp" alt="Ilustración de referencia: antes y después de SMP en coronilla" loading="lazy" width="900" height="900"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-07.webp" alt="Ilustración de referencia: efecto de cabello rapado con micropigmentación" loading="lazy" width="900" height="900"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-08.webp" alt="Ilustración de referencia: transformación con micropigmentación capilar" loading="lazy" width="900" height="900"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-09.webp" alt="Ilustración de referencia: comparación antes y después de SMP, vista frontal" loading="lazy" width="900" height="600"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-10.webp" alt="Ilustración de referencia: recuperación visual de línea de cabello con SMP" loading="lazy" width="900" height="600"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-11.webp" alt="Ilustración de referencia: antes y después de micropigmentación en calvicie avanzada" loading="lazy" width="900" height="600"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-12.webp" alt="Ilustración de referencia: densidad recuperada visualmente con SMP" loading="lazy" width="900" height="600"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-smp-13.webp" alt="Ilustración de referencia: resultado de SMP con cabello corto" loading="lazy" width="900" height="600"></div>
+      <div class="ilu-item"><span class="chip-ilu">Ilustrativa</span><img src="/imagenes/tecnica-mb-01.webp" alt="Ilustración de referencia: diseño de cejas con técnica semipermanente" loading="lazy" width="900" height="900"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <div class="about-grid">
+    <div class="about-frame rv">
+      <img src="/imagenes/janeth-retrato.webp" alt="Janeth, especialista en microblading y micropigmentación, en su estudio de Tijuana" width="800" height="800" loading="lazy">
+    </div>
+    <div class="rv">
+      <span class="label">Quién soy</span>
+      <h2 class="section-title">Detrás del arte,<br><em>hay una historia.</em></h2>
+      <div class="hairline"></div>
+      <p class="about-text">Soy Janeth, esteticista especializada en técnicas semipermanentes y tratamientos faciales de alta precisión. Mi misión es simple: que cada persona que pase por mis manos salga con más confianza de la que entró.</p>
+      <span class="about-cred">Certificada por Phi Academy</span>
+      <p class="about-text">Me formé en una de las academias de maquillaje semipermanente más reconocidas a nivel internacional, y llevo más de cinco años perfeccionando el oficio con clientas reales. Cada procedimiento lo realizo con el mismo cuidado y detalle que pondría en mí misma.</p>
+      <a href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20saber%20más%20sobre%20tus%20servicios" class="btn btn-gold" target="_blank" rel="noopener" style="margin-top:0.6rem;">Hablemos ⟶</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+  <div class="section-head center rv" style="margin-left:auto;margin-right:auto;">
+    <span class="label">Lo que dicen</span>
+    <h2 class="section-title">Clientas que <em>confían.</em></h2>
+    <div class="hairline"></div>
+  </div>
+  <div class="testimonios-grid">
+    <div class="t-card featured rv">
+      <div class="t-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+      <p class="t-text">El microblading que me hizo Janeth cambió mi vida. Mis cejas se veían tan naturales que nadie creía que eran semipermanentes.</p>
+      <div class="t-author">
+        <div class="t-avatar" aria-hidden="true">MG</div>
+        <div><div class="t-name">María G.</div><div class="t-service">Microblading</div></div>
+      </div>
+    </div>
+    <div class="t-card rv">
+      <div class="t-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+      <p class="t-text">Me hice el scalp micropigmentation y quedé sorprendida. La diferencia es brutal, se ve tan real. Janeth es muy profesional y te explica todo paso a paso. 100% recomendada.</p>
+      <div class="t-author">
+        <div class="t-avatar" aria-hidden="true">RL</div>
+        <div><div class="t-name">Rocío L.</div><div class="t-service">Scalp Micropigmentation</div></div>
+      </div>
+    </div>
+    <div class="t-card rv">
+      <div class="t-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+      <p class="t-text">Los faciales con Janeth son los mejores que he tenido. Mi piel brilla desde la primera sesión. Te asesora perfectamente según tu tipo de piel y se nota que le apasiona lo que hace.</p>
+      <div class="t-author">
+        <div class="t-avatar" aria-hidden="true">AS</div>
+        <div><div class="t-name">Ana S.</div><div class="t-service">Faciales</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-head center rv" style="margin-left:auto;margin-right:auto;">
+    <span class="label">Aprende antes de agendar</span>
+    <h2 class="section-title">Guías <em>honestas.</em></h2>
+    <div class="hairline"></div>
+    <p style="color:var(--ivory-55);font-size:0.95rem;max-width:48ch;margin:0 auto;">Lo que necesitas saber sobre microblading, SMP y cuidado de la piel — sin discurso de ventas.</p>
+  </div>
+  <div class="blog-grid">
+    <!--BLOG:START-->
+    <a class="post-card rv" href="/blog/microblading-en-tijuana-guia-honesta.html">
+      <span class="post-cat">Microblading</span>
+      <h3>Microblading en Tijuana: Lo que aprendí en más de 5 años trabajando cejas reales</h3>
+      <p>Todo lo que necesitas saber antes de hacerte microblading — con la honestidad que mereces, no el discurso de ventas que encuentras en todas partes.</p>
+      <div class="post-foot"><span class="post-date">Mayo 2026</span><span class="post-link">Leer guía ⟶</span></div>
+    </a>
+    <a class="post-card rv" href="/blog/duele-el-microblading.html">
+      <span class="post-cat">Microblading</span>
+      <h3>¿Duele el microblading? Todo lo que necesitas saber</h3>
+      <p>Una de las preguntas más frecuentes antes de una sesión de microblading. Te explico todo con honestidad para que llegues tranquila a tu cita.</p>
+      <div class="post-foot"><span class="post-date">Enero 2025</span><span class="post-link">Leer guía ⟶</span></div>
+    </a>
+    <!--BLOG:END-->
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="inner">
+    <div class="rv">
+      <span class="label">Preguntas frecuentes</span>
+      <h2 class="section-title">Todo lo que necesitas <em>saber.</em></h2>
+      <div class="hairline"></div>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Duele el microblading?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Se aplica anestesia tópica antes de iniciar, por lo que la mayoría de las clientas reportan solo una ligera presión o sensación de raspado. El nivel de molestia varía según la sensibilidad de cada persona, pero es completamente tolerable.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Cuánto dura el microblading?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Con los cuidados adecuados, entre 12 y 18 meses. Factores como el tipo de piel, la exposición al sol y la rutina de cuidado influyen en la duración. Se recomienda un retoque anual para mantener el resultado óptimo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Qué es la Scalp Micropigmentation y quién es candidato?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Es una técnica que simula folículos pilosos con micropuntos de tinta especializada, creando la ilusión de cabello. Ideal para personas con alopecia, calvicie, entradas pronunciadas o quienes desean mayor densidad visual. Sin cirugía, sin recuperación.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Cómo cuido mi piel después de un facial?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Durante las primeras 24-48 horas evita maquillaje, sol directo y actividad física intensa. Hidrata con el producto recomendado y usa protector solar SPF 30+. Recibirás indicaciones personalizadas al finalizar tu sesión.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Cuántas sesiones de SMP se necesitan?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Generalmente entre 2 y 3 sesiones, separadas por intervalos de 7-10 días. En cada sesión se construye y perfecciona el resultado, ajustando densidad y tono para lograr el aspecto más natural posible.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Dónde están ubicados en Tijuana?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>José Clemente Orozco 2340 Int. 403, Zona Urbana Río Tijuana, C.P. 22010. Atendemos lunes a viernes 10am–7pm y sábados 10am–6pm. <a href="https://maps.app.goo.gl/QthQaw5yuF5xBHTD6" target="_blank" rel="noopener">Ver en Google Maps ⟶</a></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contacto-inner rv">
+    <span class="label">Hablemos</span>
+    <h2 class="section-title">¿Lista para tu <em>transformación?</em></h2>
+    <div class="hairline"></div>
+    <p>Agenda tu cita directamente por WhatsApp. Te respondo rápido, sin formularios ni complicaciones — tu tiempo también vale.</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20agendar%20una%20cita" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="#0B0A08" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar por WhatsApp
+      </a>
+      <a href="https://www.instagram.com/janethphi" class="btn btn-outline" target="_blank" rel="noopener">Instagram ⟶</a>
+    </div>
+    <div class="contact-info">
+      <div class="c-item">
+        <span class="c-label">Ubicación</span>
+        <p class="c-val"><a href="https://maps.app.goo.gl/QthQaw5yuF5xBHTD6" target="_blank" rel="noopener">José Clemente Orozco 2340 Int. 403</a><br><span class="c-sub">Zona Urbana Río Tijuana, C.P. 22010</span></p>
+      </div>
+      <div class="c-item">
+        <span class="c-label">WhatsApp</span>
+        <p class="c-val">+52 663 202 0133</p>
+      </div>
+      <div class="c-item">
+        <span class="c-label">Horario</span>
+        <p class="c-val">Lun–Vie 10am–7pm<br><span class="c-sub">Sáb 10am–6pm</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <img src="/imagenes/logo.png" alt="JanethPhi" width="400" height="400">
+  <span class="f-copy">© 2026 JanethPhi · Todos los derechos reservados</span>
+  <div class="f-social">
+    <a href="https://www.instagram.com/janethphi" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://wa.me/526632020133" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/526632020133?text=Hola%20Janeth%2C%20quiero%20información" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "JanethPhi",
+  "description": "Especialista en Microblading, Faciales y Scalp Micropigmentation en Tijuana, Baja California. Certificada por Phi Academy.",
+  "url": "https://janethphi.netlify.app",
+  "telephone": "+526632020133",
+  "image": "https://janethphi.netlify.app/imagenes/og-image.jpg",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "José Clemente Orozco 2340 Int. 403",
+    "addressLocality": "Tijuana",
+    "addressRegion": "Baja California",
+    "postalCode": "22010",
+    "addressCountry": "MX"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 32.5149, "longitude": -117.0382 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "18:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/janethphi"],
+  "founder": { "@type": "Person", "name": "Janeth", "jobTitle": "Especialista en micropigmentación certificada por Phi Academy" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Estética",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microblading", "description": "Técnica semipermanente de pelo a pelo para diseño de cejas naturales." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Scalp Micropigmentation", "description": "Pigmentación capilar que simula folículos para tratar alopecia y calvicie." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Faciales", "description": "Tratamientos faciales personalizados: limpieza, hidratación y antienvejecimiento." } }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Duele el microblading?", "acceptedAnswer": { "@type": "Answer", "text": "El microblading es un procedimiento mínimamente invasivo. Se aplica anestesia tópica antes de iniciar, por lo que la mayoría de las clientas reportan solo una ligera presión o sensación de raspado. El nivel de molestia varía según la sensibilidad de cada persona, pero es completamente tolerable." } },
+    { "@type": "Question", "name": "¿Cuánto dura el microblading?", "acceptedAnswer": { "@type": "Answer", "text": "Con los cuidados adecuados, el microblading puede durar entre 12 y 18 meses. Factores como el tipo de piel, la exposición al sol y la rutina de cuidado influyen en la duración. Se recomienda una sesión de retoque al año para mantener el resultado óptimo." } },
+    { "@type": "Question", "name": "¿Qué es la Scalp Micropigmentation (SMP) y quién es candidato?", "acceptedAnswer": { "@type": "Answer", "text": "La SMP es una técnica de pigmentación capilar que simula folículos pilosos con micropuntos de tinta especializada, creando la ilusión de cabello. Es ideal para personas con alopecia, calvicie avanzada, entradas pronunciadas o quienes desean mayor densidad visual. No requiere cirugía ni recuperación." } },
+    { "@type": "Question", "name": "¿Cómo debo cuidar mi piel después de un facial?", "acceptedAnswer": { "@type": "Answer", "text": "Durante las primeras 24-48 horas evita maquillaje, exposición solar directa y actividad física intensa. Hidrata tu piel con el producto recomendado por tu especialista y usa protector solar SPF 30+ al salir. Evita tocarte la cara y sigue las indicaciones personalizadas que te daremos en consulta." } },
+    { "@type": "Question", "name": "¿Cuántas sesiones de SMP se necesitan?", "acceptedAnswer": { "@type": "Answer", "text": "El tratamiento de Scalp Micropigmentation generalmente requiere entre 2 y 3 sesiones separadas por intervalos de 7-10 días. En cada sesión se va construyendo y perfeccionando el resultado, ajustando la densidad y el tono para lograr el aspecto más natural posible." } },
+    { "@type": "Question", "name": "¿Dónde está ubicada JanethPhi en Tijuana?", "acceptedAnswer": { "@type": "Answer", "text": "Estamos ubicados en José Clemente Orozco 2340 Int. 403, C.P. 22010, Zona Urbana Río Tijuana, Tijuana, Baja California. Atendemos de lunes a viernes de 10:00 am a 7:00 pm y sábados de 10:00 am a 6:00 pm. Agenda tu cita por WhatsApp al +52 663 202 0133." } }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* menú móvil */
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('mobile-menu');
+  function closeMenu(){ document.body.classList.remove('menu-open'); toggle.setAttribute('aria-expanded','false'); toggle.setAttribute('aria-label','Abrir menú'); }
+  toggle.addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
+
+  /* tabs de galería */
+  var tabs = document.querySelectorAll('.gallery-tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      document.querySelectorAll('.gallery-panel').forEach(function(p){ p.classList.remove('active'); });
+      tab.setAttribute('aria-selected','true');
+      document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
+    });
+  });
+
+  /* sliders antes/después */
+  document.querySelectorAll('.ba').forEach(function(ba){
+    var range = ba.querySelector('.ba-range');
+    range.addEventListener('input', function(){ ba.style.setProperty('--pos', range.value + '%'); });
+  });
+
+  /* acordeón FAQ */
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(function(b){
+        b.setAttribute('aria-expanded','false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if(!expanded){
+        btn.setAttribute('aria-expanded','true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+
+  /* reveals + videos según visibilidad */
+  if('IntersectionObserver' in window){
+    var rev = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); rev.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.rv').forEach(function(el){ rev.observe(el); });
+
+    var vids = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v = e.target;
+        if(reduced) { v.pause(); return; }
+        if(e.isIntersecting){ v.play().catch(function(){}); } else { v.pause(); }
+      });
+    }, { threshold: 0.25 });
+    document.querySelectorAll('video').forEach(function(v){ vids.observe(v); });
+  } else {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
+  }
+  if(reduced){ document.querySelectorAll('video').forEach(function(v){ v.removeAttribute('autoplay'); v.pause(); }); }
+})();
+</script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", function(user) {
+    if (!user) {
+      window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
+    }
+  });
+}
+</script>
+</body>
+</html>
